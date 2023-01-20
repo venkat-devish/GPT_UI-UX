@@ -1,0 +1,104 @@
+.gpt3__header {
+  display: flex;
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 5rem;
+
+    h1 {
+      font-family: var(--font-family);
+      font-weight: 800;
+      font-size: 62px;
+      line-height: 75px;
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      font-family: var(--font-family);
+      font-size: 20px;
+      line-height: 27px;
+      color: var(--color-text);
+      margin-top: 1.5rem;
+    }
+
+    &__input {
+      width: 100%;
+      margin: 2rem 0 1rem;
+      display: flex;
+
+      input {
+        flex: 2;
+        width: 100%;
+        min-height: 50px;
+        font-family: var(--font-family);
+        background: var(--color-footer);
+        border: 2px solid var(--color-footer);
+        padding: 0 1rem;
+        outline: none;
+        color: #fff;
+        border-radius: 5px 0px 0px 5px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      button {
+        flex: 0.6;
+        width: 100%;
+        min-height: 50px;
+        font-family: var(--font-family);
+        background: #ff4820;
+        border-radius: 5px 0px 0px 5px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        color: #ffffff;
+        padding: 0 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    &__people {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 2rem;
+
+      img {
+        height: 38px;
+        width: 181.79px;
+      }
+
+      p {
+        margin: 0;
+        margin-left: 1rem;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 38px;
+        color: #fff;
+      }
+    }
+  }
+
+  &-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+}
+
+.gpt3__header-image img {
+  height: 100px;
+  width: 100px;
+}

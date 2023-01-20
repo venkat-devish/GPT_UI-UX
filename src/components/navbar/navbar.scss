@@ -35,7 +35,7 @@
     display: none;
     position: relative;
   }
-  //gpt3__navbar-menu_container-links-sign
+
   &-menu_container {
     display: flex;
     align-items: flex-end;
@@ -96,9 +96,6 @@
     cursor: pointer;
   }
 }
-
-// gpt3__navbar-menu_container
-// gpt3__navbar-menu_container-links-sign
 
 // Smaller Laptops
 @media screen and (max-width: 1050px) {
