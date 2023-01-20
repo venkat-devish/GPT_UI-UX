@@ -1,6 +1,6 @@
 import React from "react";
 
-export const NavLinks = () => (
+const NavLinks = () => (
   <>
     <p>
       <a href="#home">Home</a>
@@ -19,3 +19,5 @@ export const NavLinks = () => (
     </p>
   </>
 );
+
+export default NavLinks;

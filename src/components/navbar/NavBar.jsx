@@ -1,45 +1,44 @@
 import React, { useState } from "react";
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { NavLinks } from "../../organisms/NavLinks";
-import logo from "../../assets/GPT-3.svg";
 import "./navbar.scss";
+import logo from "../../assets/GPT-3.svg";
+import NavLinks from "../../organisms/NavLinks";
+import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
 
 const NavBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenuHandler = () => {
-    setShowMenu((prevMenu) => !prevMenu);
+  const [showButton, setShowButton] = useState(false);
+  const handleButtonToggle = () => {
+    setShowButton((prevState) => !prevState);
   };
 
   return (
-    <div className="navbar__container">
-      <div className="navbar__links">
-        <div className="navbar__links--logo">
+    <div className="gpt3__navbar">
+      <div className="gpt3__navbar-links">
+        <div className="gpt3__navbar-links_logo">
           <img src={logo} alt="gpt3 logo" />
         </div>
-        <div className="navbar__links--container">
+        <div className="gpt3__navbar-links_container">
           <NavLinks />
         </div>
       </div>
-      <div className="navbar__sign">
+      <div className="gpt3__navbar-sign">
         <p>Sign In</p>
-        <button className="navbar__sign--up">Sign up</button>
+        <button type="button">Sign Up</button>
       </div>
-      <div className="navbar--menu">
-        {showMenu ? (
-          <RiCloseLine color="#fff" size={27} onClick={toggleMenuHandler} />
+      <div className="gpt3__navbar-menu">
+        {showButton ? (
+          <RiCloseLine size={27} color={"#fff"} onClick={handleButtonToggle} />
         ) : (
-          <RiMenu3Line color="#fff" size={27} onClick={toggleMenuHandler} />
+          <RiMenu3Line size={27} color={"#fff"} onClick={handleButtonToggle} />
         )}
-
-        {showMenu && (
-          <div className="navbar__menu-container">
-            <div className="navbar__menu-container-links scale-up-center">
+        {showButton && (
+          <div className="gpt3__navbar-menu_container scale-up-center">
+            <div className="gpt3__navbar-menu_container-links">
               <NavLinks />
-              <div className="navbar__menu-container-links-sign">
-                <p>Sign In</p>
-                <button type="button">Sign up</button>
-              </div>
+            </div>
+
+            <div className="gpt3__navbar-menu_container-links-sign">
+              <p>Sign In</p>
+              <button type="button">Sign Up</button>
             </div>
           </div>
         )}
