@@ -1,8 +1,10 @@
 .gpt3__header {
   display: flex;
+  flex-direction: row;
 
   &-content {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
@@ -11,7 +13,7 @@
     h1 {
       font-family: var(--font-family);
       font-weight: 800;
-      font-size: 62px;
+      font-size: 50px;
       line-height: 75px;
       letter-spacing: -0.04em;
     }
@@ -68,6 +70,7 @@
     }
 
     &__people {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -86,6 +89,7 @@
         font-size: 15px;
         line-height: 38px;
         color: #fff;
+        text-align: center;
       }
     }
   }
@@ -95,10 +99,76 @@
     align-items: center;
     justify-content: center;
     flex: 1;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
-.gpt3__header-image img {
-  height: 100px;
-  width: 100px;
+@media screen and (max-width: 1050px) {
+  .gpt3__header {
+    flex-direction: column;
+
+    &-content {
+      margin: 0 0 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gpt3__header {
+    h1 {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &-content {
+      &__people {
+        flex-direction: column;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      &__input {
+        input,
+        button {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .gpt3__header {
+    h1 {
+      font-size: 36px;
+      line-height: 48px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &-content {
+      &__input {
+        input,
+        button {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
 }
