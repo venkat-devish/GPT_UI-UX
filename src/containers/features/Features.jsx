@@ -5,7 +5,7 @@ import { featuresData } from "../../helpers/featuresData";
 
 const Features = () => {
   return (
-    <div className="gpt3__features section__padding" id="features">
+    <div className="gpt3__features section__padding" id="possibility">
       <div className="gpt3__features-heading">
         <h1 className="gradient__text">
           The Future is Now and You Just Need To Realize It. Step into Future
